@@ -1,0 +1,86 @@
+{
+	"compiler": {
+		"version": "0.7.5+commit.eb77ed08"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "policy",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "pullPolicy",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newPolicy_",
+						"type": "address"
+					}
+				],
+				"name": "pushPolicy",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renouncePolicy",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/StakingDistributor.sol": "IPolicy"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/StakingDistributor.sol": {
+			"keccak256": "0xce00daad766caee9ff299523589131e303ca6860d593fade16dba130d9f0645f",
+			"license": "AGPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://74f270aa664a143a8202f1ff8de9a6a2f9e17f83660a682a47ff5b86c4ef70d5",
+				"dweb:/ipfs/QmSLdLUzbrtLhhR6WsWSkQ2n74WBQcnQ9w5wjqyFf6LgSq"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,978 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/hayden/dev/gopath/src/apeBank-contracts/contracts/ApeERC20.sol": {
+      "lastModificationDate": 1637993970177,
+      "contentHash": "a25a92ec68db15f401c30797f811b3d2",
+      "sourceName": "contracts/ApeERC20.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "storageLayout",
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "ApeERC20Token",
+        "Counters",
+        "ERC20",
+        "ERC20Permit",
+        "EnumerableSet",
+        "IERC20",
+        "IERC2612Permit",
+        "IOwnable",
+        "Ownable",
+        "SafeMath",
+        "VaultOwned"
+      ]
+    },
+    "/Users/hayden/dev/gopath/src/apeBank-contracts/contracts/artifacts/OHMCirculatingSupplyConrtact.sol": {
+      "lastModificationDate": 1637484680883,
+      "contentHash": "baab0e5618a1ac81c655cecb26718e0a",
+      "sourceName": "contracts/artifacts/OHMCirculatingSupplyConrtact.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "storageLayout",
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "IERC20",
+        "OHMCirculatingSupplyConrtact",
+        "SafeMath"
+      ]
+    },
+    "/Users/hayden/dev/gopath/src/apeBank-contracts/contracts/artifacts/OHMPrincipleDepository.sol": {
+      "lastModificationDate": 1637484880031,
+      "contentHash": "c1222a54b9def6d8df1923ce84fc9acc",
+      "sourceName": "contracts/artifacts/OHMPrincipleDepository.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "storageLayout",
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "Address",
+        "Babylonian",
+        "BitMath",
+        "Counters",
+        "ERC20",
+        "ERC20Permit",
+        "FixedPoint",
+        "FullMath",
+        "IBondingCalculator",
+        "IERC20",
+        "IERC2612Permit",
+        "IOwnable",
+        "IPrincipleDepository",
+        "ITreasury",
+        "IUniswapV2ERC20",
+        "IUniswapV2Router01",
+        "OHMPrincipleDepository",
+        "Ownable",
+        "SafeERC20",
+        "SafeMath"
+      ]
+    },
+    "/Users/hayden/dev/gopath/src/apeBank-contracts/contracts/BondDepository.sol": {
+      "lastModificationDate": 1637993623649,
+      "contentHash": "e7c02d46b18b9d107fd76757b53bf907",
+      "sourceName": "contracts/BondDepository.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "storageLayout",
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "Address",
+        "ApeBondDepository",
+        "Counters",
+        "ERC20",
+        "ERC20Permit",
+        "FixedPoint",
+        "FullMath",
+        "IBondCalculator",
+        "IERC20",
+        "IERC2612Permit",
+        "IOwnable",
+        "IStaking",
+        "IStakingHelper",
+        "ITreasury",
+        "Ownable",
+        "SafeERC20",
+        "SafeMath"
+      ]
+    },
+    "/Users/hayden/dev/gopath/src/apeBank-contracts/contracts/CVXBondDepository.sol": {
+      "lastModificationDate": 1637993655104,
+      "contentHash": "5603161405ad8bc41f869518a228781b",
+      "sourceName": "contracts/CVXBondDepository.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "storageLayout",
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "Address",
+        "ApeCVXBondDepository",
+        "FixedPoint",
+        "FullMath",
+        "IERC20",
+        "IOwnable",
+        "IStaking",
+        "IStakingHelper",
+        "ITreasury",
+        "Ownable",
+        "SafeERC20",
+        "SafeMath"
+      ]
+    },
+    "/Users/hayden/dev/gopath/src/apeBank-contracts/contracts/mocks/BOBA.sol": {
+      "lastModificationDate": 1637993558043,
+      "contentHash": "4f85cbd381fae32ca7a1d9ef89c1b9c8",
+      "sourceName": "contracts/mocks/BOBA.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "storageLayout",
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "BOBA",
+        "IDAI",
+        "LibNote"
+      ]
+    },
+    "/Users/hayden/dev/gopath/src/apeBank-contracts/contracts/mocks/Frax.sol": {
+      "lastModificationDate": 1637980134280,
+      "contentHash": "451e3c1300a6992f37827a367ed5006a",
+      "sourceName": "contracts/mocks/Frax.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "storageLayout",
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "FRAX",
+        "IFRAX",
+        "LibNote"
+      ]
+    },
+    "/Users/hayden/dev/gopath/src/apeBank-contracts/contracts/mocks/MockBondDepository.sol": {
+      "lastModificationDate": 1637471004159,
+      "contentHash": "59ba0e978ecb6a2b32362c92402990ed",
+      "sourceName": "contracts/mocks/MockBondDepository.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "storageLayout",
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "Address",
+        "Counters",
+        "ERC20",
+        "ERC20Permit",
+        "FixedPoint",
+        "FullMath",
+        "IBondCalculator",
+        "IERC20",
+        "IERC2612Permit",
+        "IOwnable",
+        "IStaking",
+        "IStakingHelper",
+        "ITreasury",
+        "MockOlympusBondDepository",
+        "Ownable",
+        "SafeERC20",
+        "SafeMath"
+      ]
+    },
+    "/Users/hayden/dev/gopath/src/apeBank-contracts/contracts/mocks/MockTreasury.sol": {
+      "lastModificationDate": 1637468703641,
+      "contentHash": "ee4c2f85409b1e5511682bb3770ce3cb",
+      "sourceName": "contracts/mocks/MockTreasury.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "storageLayout",
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "Address",
+        "IBondCalculator",
+        "IERC20",
+        "IERC20Mintable",
+        "IOHMERC20",
+        "IOwnable",
+        "MockOlympusTreasury",
+        "Ownable",
+        "SafeERC20",
+        "SafeMath"
+      ]
+    },
+    "/Users/hayden/dev/gopath/src/apeBank-contracts/contracts/RedeemHelper.sol": {
+      "lastModificationDate": 1637520523079,
+      "contentHash": "d2f944a9f589893b5a38f6b35b39cc4b",
+      "sourceName": "contracts/RedeemHelper.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "storageLayout",
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "IBond",
+        "IOwnable",
+        "Ownable",
+        "RedeemHelper"
+      ]
+    },
+    "/Users/hayden/dev/gopath/src/apeBank-contracts/contracts/sApeERC20.sol": {
+      "lastModificationDate": 1637993770605,
+      "contentHash": "2d4b9875fe6dd069f26ba1895456ae48",
+      "sourceName": "contracts/sApeERC20.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "storageLayout",
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "Address",
+        "Counters",
+        "ERC20",
+        "ERC20Permit",
+        "IERC20",
+        "IERC2612Permit",
+        "IOwnable",
+        "Ownable",
+        "SafeMath",
+        "sApe"
+      ]
+    },
+    "/Users/hayden/dev/gopath/src/apeBank-contracts/contracts/Staking.sol": {
+      "lastModificationDate": 1637527870547,
+      "contentHash": "28cb2aa1e9723e06e4dffb0a8f340c5c",
+      "sourceName": "contracts/Staking.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "storageLayout",
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "Address",
+        "IDistributor",
+        "IERC20",
+        "IOwnable",
+        "IWarmup",
+        "IsOHM",
+        "OlympusStaking",
+        "Ownable",
+        "SafeERC20",
+        "SafeMath"
+      ]
+    },
+    "/Users/hayden/dev/gopath/src/apeBank-contracts/contracts/StakingDistributor.sol": {
+      "lastModificationDate": 1637528422208,
+      "contentHash": "41c9affc5f367f0583b9f5d706e62063",
+      "sourceName": "contracts/StakingDistributor.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "storageLayout",
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "Address",
+        "Distributor",
+        "IERC20",
+        "IPolicy",
+        "ITreasury",
+        "Policy",
+        "SafeERC20",
+        "SafeMath"
+      ]
+    },
+    "/Users/hayden/dev/gopath/src/apeBank-contracts/contracts/StakingHelper.sol": {
+      "lastModificationDate": 1637529205681,
+      "contentHash": "bb9483e08b39fbc8aa67bc314d1c4c92",
+      "sourceName": "contracts/StakingHelper.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "storageLayout",
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "IERC20",
+        "IStaking",
+        "StakingHelper"
+      ]
+    },
+    "/Users/hayden/dev/gopath/src/apeBank-contracts/contracts/StakingWarmup.sol": {
+      "lastModificationDate": 1637820727341,
+      "contentHash": "cca3771a2a1b0349dacd58ab2dd04cfd",
+      "sourceName": "contracts/StakingWarmup.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "storageLayout",
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "IERC20",
+        "StakingWarmup"
+      ]
+    },
+    "/Users/hayden/dev/gopath/src/apeBank-contracts/contracts/StandardBondingCalculator.sol": {
+      "lastModificationDate": 1637515457509,
+      "contentHash": "caaa3d4ffbb5b49f0f924ad1f3347e71",
+      "sourceName": "contracts/StandardBondingCalculator.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "storageLayout",
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "Babylonian",
+        "BitMath",
+        "FixedPoint",
+        "FullMath",
+        "IBondingCalculator",
+        "IERC20",
+        "IUniswapV2ERC20",
+        "IUniswapV2Pair",
+        "OlympusBondingCalculator",
+        "SafeMath"
+      ]
+    },
+    "/Users/hayden/dev/gopath/src/apeBank-contracts/contracts/Treasury.sol": {
+      "lastModificationDate": 1637994083282,
+      "contentHash": "6003cc0df4cc102620423fda69bb3167",
+      "sourceName": "contracts/Treasury.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "storageLayout",
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "Address",
+        "ApeTreasury",
+        "IBondCalculator",
+        "IERC20",
+        "IERC20Mintable",
+        "IOHMERC20",
+        "IOwnable",
+        "Ownable",
+        "SafeERC20",
+        "SafeMath"
+      ]
+    },
+    "/Users/hayden/dev/gopath/src/apeBank-contracts/contracts/wETHBondDepository.sol": {
+      "lastModificationDate": 1637528449517,
+      "contentHash": "4ae4bf15823d340fb3ce08798c06ff40",
+      "sourceName": "contracts/wETHBondDepository.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "storageLayout",
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "Address",
+        "AggregatorV3Interface",
+        "Counters",
+        "ERC20",
+        "ERC20Permit",
+        "FixedPoint",
+        "FullMath",
+        "IERC20",
+        "IERC2612Permit",
+        "IOwnable",
+        "IStaking",
+        "IStakingHelper",
+        "ITreasury",
+        "Ownable",
+        "SafeERC20",
+        "SafeMath",
+        "wOlympusBondDepository"
+      ]
+    },
+    "/Users/hayden/dev/gopath/src/apeBank-contracts/contracts/ApeBANKDAO.sol": {
+      "lastModificationDate": 1637994005042,
+      "contentHash": "8f3536c61fdd8ad32378be230bbd7fee",
+      "sourceName": "contracts/ApeBANKDAO.sol",
+      "solcConfig": {
+        "version": "0.7.5",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 10000
+          },
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "storageLayout",
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.5"
+      ],
+      "artifacts": [
+        "Address",
+        "ApeDAO",
+        "IERC20",
+        "SafeERC20",
+        "SafeMath"
+      ]
+    }
+  }
+}

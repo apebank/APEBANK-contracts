@@ -1,0 +1,47 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"author": "Brendan Asselstine",
+			"details": "Thanks to https://medium.com/hownetworks/dont-waste-cycles-with-modulo-bias-35b6fdafcf94",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "A library that uses entropy to select a random number within a bound.  Compensates for modulo bias.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/UniformRandomNumber.sol": "UniformRandomNumber"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/UniformRandomNumber.sol": {
+			"keccak256": "0x0d86eb3349d8a9e226ff6f3328a6a79bbf872859a4afbe489051fbf3b8550df4",
+			"urls": [
+				"bzz-raw://ec8d51eb380f1ef5a089d8816dacf46f8a2a806e85b970e532177a53e0a1942f",
+				"dweb:/ipfs/Qmb1V9LkAdw4YZbJLC7Hp2Xpnnooz2WtWtcdRXgUPDJEuX"
+			]
+		}
+	},
+	"version": 1
+}

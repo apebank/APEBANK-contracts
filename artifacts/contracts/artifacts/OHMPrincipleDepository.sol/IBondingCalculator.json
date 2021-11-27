@@ -1,0 +1,35 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "IBondingCalculator",
+  "sourceName": "contracts/artifacts/OHMPrincipleDepository.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "principleTokenAddress_",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amountDeposited_",
+          "type": "uint256"
+        }
+      ],
+      "name": "principleValuation",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "principleValuation_",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

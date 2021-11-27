@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.7.5+commit.eb77ed08"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/BondDepository.sol": "FixedPoint"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/BondDepository.sol": {
+			"keccak256": "0x0dbd346bb590c9257350d550d3c1b94c1bb845a11a78985d79c96f5b6363a369",
+			"license": "AGPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://8e6c982c4df822481dc4146b73514fa9db0ac5f6f23625656b0db6eff0c1b651",
+				"dweb:/ipfs/QmfRrg6Cx3TBh1y62hPXcdGUWfQ9eyXDvYdGwLLyP6SMsg"
+			]
+		}
+	},
+	"version": 1
+}

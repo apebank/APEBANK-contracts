@@ -1,0 +1,47 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"author": "Enrique Piqueras - <epiquerass@gmail.com>",
+			"details": "A factory of trees that keep track of staked values for sortition.",
+			"kind": "dev",
+			"methods": {},
+			"title": "SortitionSumTreeFactory",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SortitionSumTreeFactory.sol": "SortitionSumTreeFactory"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SortitionSumTreeFactory.sol": {
+			"keccak256": "0xd27eda9d1850b199fa424697f64ed7d6841441841a0152940cba619e2a21d154",
+			"urls": [
+				"bzz-raw://82786e57e0f27ed3e7c5011906b1c9bafcade8ade49f6172d70c71a16f7c4cbf",
+				"dweb:/ipfs/QmZSE8rBFvqWq8FqG3u5vfi7riESaKxHW9Awkw89sJVsBj"
+			]
+		}
+	},
+	"version": 1
+}

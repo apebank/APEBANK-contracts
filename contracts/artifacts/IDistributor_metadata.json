@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.7.5+commit.eb77ed08"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "distribute",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Staking.sol": "IDistributor"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Staking.sol": {
+			"keccak256": "0x6424b94f18d5fd7a2f842d7a32afe62f845ca1ba9f7af8aed2380d4fc77606b6",
+			"license": "AGPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://9133f1a9b3b100177c92e9f98d0ec9f43f6de33f1a68cf2071c1f7074af759e7",
+				"dweb:/ipfs/QmREgtEMG3ciuMoEVS19f83oTtYsBRf4turnxYZjjmcpgt"
+			]
+		}
+	},
+	"version": 1
+}
