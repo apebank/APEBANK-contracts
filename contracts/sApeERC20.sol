@@ -1010,7 +1010,7 @@ contract sApe is ERC20Permit, Ownable {
         uint totalStakedAfter;
         uint amountRebased;
         uint index;
-        uint blockNumberOccured;
+        uint timeOccured;
     }
     Rebase[] public rebases;
 
@@ -1105,7 +1105,7 @@ contract sApe is ERC20Permit, Ownable {
             totalStakedAfter: circulatingSupply(),
             amountRebased: profit_,
             index: index(),
-            blockNumberOccured: block.number
+            timeOccured: uint32(block.timestamp)
         }));
         
         emit LogSupply( epoch_, block.timestamp, _totalSupply );

@@ -4,7 +4,7 @@ const func = async (hre) => {
     const { deploy } = deployments
     const { deployer } = await getNamedAccounts()
 
-    console.log('Deploying contracts with the account: ' + deployer.address);
+    console.log('Deploying contracts with the account: ' + deployer);
   
     await deploy('ApeERC20Token', {
       from: deployer,

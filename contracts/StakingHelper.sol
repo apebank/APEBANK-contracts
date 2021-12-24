@@ -91,10 +91,10 @@ contract StakingHelper {
         OHM = _OHM;
     }
 
-    function stake( uint _amount ) external {
+    function stake( uint _amount ,address _recipient) external {
         IERC20( OHM ).transferFrom( msg.sender, address(this), _amount );
         IERC20( OHM ).approve( staking, _amount );
-        IStaking( staking ).stake( _amount, msg.sender );
-        IStaking( staking ).claim( msg.sender );
+        IStaking( staking ).stake( _amount, _recipient );
+        IStaking( staking ).claim( _recipient );
     }
 }

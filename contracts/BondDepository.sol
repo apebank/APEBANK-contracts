@@ -75,6 +75,17 @@ library SafeMath {
         return c;
     }
 
+    function sub32(uint32 a, uint32 b) internal pure returns (uint32) {
+        return sub32(a, b, "SafeMath: subtraction overflow");
+    }
+
+    function sub32(uint32 a, uint32 b, string memory errorMessage) internal pure returns (uint32) {
+        require(b <= a, errorMessage);
+        uint32 c = a - b;
+
+        return c;
+    }
+
     function mul(uint256 a, uint256 b) internal pure returns (uint256) {
         if (a == 0) {
             return 0;
@@ -611,7 +622,7 @@ contract ApeBondDepository is Ownable {
     using FixedPoint for *;
     using SafeERC20 for IERC20;
     using SafeMath for uint;
-
+    using SafeMath for uint32;
 
 
 
@@ -645,7 +656,7 @@ contract ApeBondDepository is Ownable {
     mapping( address => Bond ) public bondInfo; // stores bond information for depositors
 
     uint public totalDebt; // total value of outstanding bonds; used for pricing
-    uint public lastDecay; // reference block for debt decay
+    uint32 public lastDecay; // reference block for debt decay
 
 
 
@@ -655,7 +666,7 @@ contract ApeBondDepository is Ownable {
     // Info for creating new bonds
     struct Terms {
         uint controlVariable; // scaling variable for price
-        uint vestingTerm; // in blocks
+        uint32 vestingTerm; // in blocks
         uint minimumPrice; // vs principle value
         uint maxPayout; // in thousandths of a %. i.e. 500 = 0.5%
         uint fee; // as % of bond payout, in hundreths. ( 500 = 5% = 0.05 for every 1 paid)
@@ -665,8 +676,8 @@ contract ApeBondDepository is Ownable {
     // Info for bond holder
     struct Bond {
         uint payout; // OHM remaining to be paid
-        uint vesting; // Blocks left to vest
-        uint lastBlock; // Last interaction
+        uint32 vesting; // Blocks left to vest
+        uint32 lastTime; // Last interaction
         uint pricePaid; // In DAI, for front end viewing
     }
 
@@ -676,7 +687,7 @@ contract ApeBondDepository is Ownable {
         uint rate; // increment
         uint target; // BCV when adjustment finished
         uint buffer; // minimum length (in blocks) between adjustments
-        uint lastBlock; // block when last adjustment made
+        uint lastTime; // block when last adjustment made
     }
 
 
@@ -716,7 +727,7 @@ contract ApeBondDepository is Ownable {
      */
     function initializeBondTerms( 
         uint _controlVariable, 
-        uint _vestingTerm,
+        uint32 _vestingTerm,
         uint _minimumPrice,
         uint _maxPayout,
         uint _fee,
@@ -733,7 +744,7 @@ contract ApeBondDepository is Ownable {
             maxDebt: _maxDebt
         });
         totalDebt = _initialDebt;
-        lastDecay = block.number;
+        lastDecay = uint32(block.timestamp);
     }
 
 
@@ -750,7 +761,7 @@ contract ApeBondDepository is Ownable {
     function setBondTerms ( PARAMETER _parameter, uint _input ) external onlyPolicy() {
         if ( _parameter == PARAMETER.VESTING ) { // 0
             require( _input >= 10000, "Vesting must be longer than 36 hours" );
-            terms.vestingTerm = _input;
+            terms.vestingTerm = uint32(_input);
         } else if ( _parameter == PARAMETER.PAYOUT ) { // 1
             require( _input <= 1000, "Payout cannot be above 1 percent" );
             terms.maxPayout = _input;
@@ -782,7 +793,7 @@ contract ApeBondDepository is Ownable {
             rate: _increment,
             target: _target,
             buffer: _buffer,
-            lastBlock: block.number
+            lastTime: uint32(block.timestamp)
         });
     }
 
@@ -831,7 +842,7 @@ contract ApeBondDepository is Ownable {
 
         uint value = ITreasury( treasury ).valueOf( principle, _amount );
         uint payout = payoutFor( value ); // payout to bonder is computed
-
+        
         require( payout >= 10000000, "Bond too small" ); // must be > 0.01 OHM ( underflow protection )
         require( payout <= maxPayout(), "Bond too large"); // size protection because there is no slippage
 
@@ -859,12 +870,12 @@ contract ApeBondDepository is Ownable {
         bondInfo[ _depositor ] = Bond({ 
             payout: bondInfo[ _depositor ].payout.add( payout ),
             vesting: terms.vestingTerm,
-            lastBlock: block.number,
+            lastTime: uint32(block.timestamp),
             pricePaid: priceInUSD
         });
 
         // indexed events are emitted
-        emit BondCreated( _amount, payout, block.number.add( terms.vestingTerm ), priceInUSD );
+        emit BondCreated( _amount, payout, block.timestamp.add( terms.vestingTerm ), priceInUSD );
         emit BondPriceChanged( bondPriceInUSD(), _bondPrice(), debtRatio() );
 
         adjust(); // control variable is adjusted
@@ -893,8 +904,8 @@ contract ApeBondDepository is Ownable {
             // store updated deposit info
             bondInfo[ _recipient ] = Bond({
                 payout: info.payout.sub( payout ),
-                vesting: info.vesting.sub( block.number.sub( info.lastBlock ) ),
-                lastBlock: block.number,
+                vesting: info.vesting.sub32(uint32(block.timestamp).sub32( info.lastTime)),
+                lastTime: uint32(block.timestamp),
                 pricePaid: info.pricePaid
             });
 
@@ -933,8 +944,8 @@ contract ApeBondDepository is Ownable {
      *  @notice makes incremental adjustment to control variable
      */
     function adjust() internal {
-        uint blockCanAdjust = adjustment.lastBlock.add( adjustment.buffer );
-        if( adjustment.rate != 0 && block.number >= blockCanAdjust ) {
+        uint blockCanAdjust = adjustment.lastTime.add( adjustment.buffer );
+        if( adjustment.rate != 0 && block.timestamp >= blockCanAdjust ) {
             uint initial = terms.controlVariable;
             if ( adjustment.add ) {
                 terms.controlVariable = terms.controlVariable.add( adjustment.rate );
@@ -947,7 +958,7 @@ contract ApeBondDepository is Ownable {
                     adjustment.rate = 0;
                 }
             }
-            adjustment.lastBlock = block.number;
+            adjustment.lastTime = uint32(block.timestamp);
             emit ControlVariableAdjustment( initial, terms.controlVariable, adjustment.rate, adjustment.add );
         }
     }
@@ -957,7 +968,7 @@ contract ApeBondDepository is Ownable {
      */
     function decayDebt() internal {
         totalDebt = totalDebt.sub( debtDecay() );
-        lastDecay = block.number;
+        lastDecay = uint32(block.timestamp);
     }
 
 
@@ -1019,7 +1030,6 @@ contract ApeBondDepository is Ownable {
         }
     }
 
-
     /**
      *  @notice calculate current ratio of debt to OHM supply
      *  @return debtRatio_ uint
@@ -1057,7 +1067,7 @@ contract ApeBondDepository is Ownable {
      *  @return decay_ uint
      */
     function debtDecay() public view returns ( uint decay_ ) {
-        uint blocksSinceLast = block.number.sub( lastDecay );
+        uint blocksSinceLast = uint32(block.timestamp).sub32( lastDecay );
         decay_ = totalDebt.mul( blocksSinceLast ).div( terms.vestingTerm );
         if ( decay_ > totalDebt ) {
             decay_ = totalDebt;
@@ -1072,7 +1082,7 @@ contract ApeBondDepository is Ownable {
      */
     function percentVestedFor( address _depositor ) public view returns ( uint percentVested_ ) {
         Bond memory bond = bondInfo[ _depositor ];
-        uint blocksSinceLast = block.number.sub( bond.lastBlock );
+        uint blocksSinceLast = uint32(block.timestamp).sub32( bond.lastTime );
         uint vesting = bond.vesting;
 
         if ( vesting > 0 ) {
